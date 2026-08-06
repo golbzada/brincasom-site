@@ -1,0 +1,14 @@
+{
+  "name": "educarafetivamente",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host --port 5173"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  },
+  "dependencies": {
+    "@emotion/is-prop-valid": "^1.4.0"
+  }
+}

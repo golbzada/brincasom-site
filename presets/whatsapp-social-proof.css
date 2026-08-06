@@ -1,0 +1,359 @@
+/* ==========================================================================
+   ISOLATED PRESET: BRINCASOM IOS WHATSAPP PROVA SOCIAL (EXACT REFERENCE UI)
+   ========================================================================== */
+
+.brincasom-social-proof {
+  padding: 4rem 1rem;
+  background-color: hsl(var(--pink-light));
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.brincasom-proof-header {
+  text-align: center;
+  max-width: 42rem;
+  margin: 0 auto 3rem auto;
+}
+
+.brincasom-proof-kicker {
+  font-family: var(--font-display, sans-serif);
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: hsl(var(--pink-deep));
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.brincasom-proof-title {
+  font-family: var(--font-display, sans-serif);
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, hsl(var(--pink-deep)), hsl(var(--purple-soft)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.brincasom-proof-subtitle {
+  font-size: 1rem;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.5;
+}
+
+/* Container da Esteira Infinito */
+.brincasom-marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 1.5rem 0;
+  mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+}
+
+.brincasom-whatsapp-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: brincasom-marquee-anim 42s linear infinite;
+  will-change: transform;
+}
+
+.brincasom-marquee-container:hover .brincasom-whatsapp-track {
+  animation-play-state: paused;
+}
+
+@keyframes brincasom-marquee-anim {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Outer iPhone Screen Card Frame */
+.brincasom-ios-phone {
+  width: 310px;
+  flex-shrink: 0;
+  border-radius: 34px;
+  background: #f6f6f6;
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  border: 4px solid #1c1c1e;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  user-select: none;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.brincasom-ios-phone:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 22px 45px -8px rgba(0, 0, 0, 0.28);
+}
+
+/* Top Phone Status Bar (iOS) */
+.brincasom-ios-statusbar {
+  background: #f6f6f6;
+  padding: 8px 16px 4px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.brincasom-ios-status-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+}
+
+/* WhatsApp Header Bar */
+.brincasom-ios-header {
+  background: #f6f6f6;
+  padding: 6px 12px 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.brincasom-ios-header-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.brincasom-ios-back-arrow {
+  color: #007aff;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-right: 2px;
+}
+
+.brincasom-ios-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e5e5ea;
+  color: #8e8e93;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.brincasom-ios-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brincasom-ios-contact-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.brincasom-ios-contact-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #000000;
+  line-height: 1.15;
+}
+
+.brincasom-ios-contact-sub {
+  font-size: 0.68rem;
+  color: #8e8e93;
+  line-height: 1.1;
+}
+
+.brincasom-ios-header-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #007aff;
+}
+
+/* Chat Wallpaper Body */
+.brincasom-ios-body {
+  background-color: #e8e0d5;
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-height: 380px;
+}
+
+/* Date Pill Badge */
+.brincasom-ios-date-badge {
+  align-self: center;
+  background: #ffffff;
+  color: #54656f;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  margin-bottom: 4px;
+}
+
+/* Message Bubbles */
+.brincasom-ios-msg-bubble {
+  max-width: 86%;
+  padding: 6px 9px;
+  font-size: 0.82rem;
+  line-height: 1.3;
+  position: relative;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  word-break: break-word;
+  text-align: left;
+}
+
+/* Outgoing Msg (Green) */
+.brincasom-ios-msg-sent {
+  align-self: flex-end;
+  background: #d9fdd3;
+  color: #111b21;
+  border-radius: 12px 12px 2px 12px;
+}
+
+/* Incoming Msg (White) */
+.brincasom-ios-msg-received {
+  align-self: flex-start;
+  background: #ffffff;
+  color: #111b21;
+  border-radius: 12px 12px 12px 2px;
+}
+
+/* Image Message Container & Wrapper */
+.brincasom-ios-img-wrapper {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 86%;
+}
+
+.brincasom-ios-img-bubble {
+  background: #ffffff;
+  padding: 3px;
+  border-radius: 12px 12px 12px 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+}
+
+.brincasom-ios-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.brincasom-ios-img-timestamp {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+  font-size: 0.6rem;
+  padding: 2px 5px;
+  border-radius: 6px;
+  backdrop-filter: blur(2px);
+}
+
+.brincasom-ios-share-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.18);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* Message Meta (Time & Double Check) */
+.brincasom-ios-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+  font-size: 0.62rem;
+  color: #667781;
+  float: right;
+  margin-top: 2px;
+  margin-left: 6px;
+}
+
+.brincasom-ios-check {
+  color: #53bdeb;
+  font-weight: bold;
+}
+
+/* Bottom iOS WhatsApp Input Bar */
+.brincasom-ios-footer {
+  background: #f6f6f6;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.brincasom-ios-plus-btn {
+  color: #007aff;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.brincasom-ios-input-pill {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
+  height: 30px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  color: #c7c7cc;
+  font-size: 0.8rem;
+}
+
+.brincasom-ios-footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #007aff;
+  font-size: 1rem;
+}
+
+/* iOS Home Indicator Bar */
+.brincasom-ios-homebar {
+  width: 110px;
+  height: 4px;
+  background: #000000;
+  border-radius: 2px;
+  margin: 6px auto 4px auto;
+  opacity: 0.8;
+}
+
+@media (max-width: 640px) {
+  .brincasom-ios-phone {
+    width: 280px;
+  }
+  .brincasom-ios-body {
+    min-height: 350px;
+  }
+}

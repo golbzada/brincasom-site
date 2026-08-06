@@ -1,0 +1,91 @@
+/* ==========================================================================
+   PRESET: EFEITO DE LEITURA INTELIGENTE (COLEÇÃO SABERES) - 5 LIVROS / APOSTILAS
+   Movement: Efeito Fan (Leque) com Sobreposição On-Hover (Desktop) e On-Click (Mobile)
+   ========================================================================== */
+
+/* Container Principal */
+.stage-fan {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0 2.5rem 0;
+  margin: 1rem 0;
+}
+
+/* Leque (Fan) */
+.fan-5-books {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.22));
+  perspective: 1000px;
+}
+
+/* Cada Livro / Apostila */
+.fan-5-books .cv {
+  width: clamp(110px, 16vw, 175px);
+  aspect-ratio: 965 / 1350;
+  border-radius: 12px;
+  margin-inline: -30px;
+  background: #ffffff;
+  overflow: hidden;
+  transform-origin: bottom center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12), 0 18px 30px -10px rgba(0, 0, 0, 0.28);
+  transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1), z-index 0.3s ease, box-shadow 0.45s ease;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fan-5-books .cv img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+/* Posicionamento Inicial em Leque (Desktop - 5 Apostilas) */
+.fan-5-books .cv.cv-1 { transform: rotate(-22deg) translateY(32px); z-index: 1; }
+.fan-5-books .cv.cv-2 { transform: rotate(-11deg) translateY(10px); z-index: 2; }
+.fan-5-books .cv.cv-3 { transform: rotate(0deg) translateY(0px); z-index: 3; }
+.fan-5-books .cv.cv-4 { transform: rotate(11deg) translateY(10px); z-index: 4; }
+.fan-5-books .cv.cv-5 { transform: rotate(22deg) translateY(32px); z-index: 5; }
+
+/* Efeito de Sobreposição e Elevação (Hover no Desktop & Click/Active no Mobile) */
+.fan-5-books .cv:hover,
+.fan-5-books .cv.active {
+  transform: translateY(-28px) rotate(0deg) scale(1.12) !important;
+  z-index: 99 !important;
+  box-shadow: 0 28px 55px -12px rgba(0, 0, 0, 0.38), 0 0 20px rgba(229, 62, 139, 0.25);
+  border-color: #ffffff;
+}
+
+/* Ajustes Responsivos para Telas Menores (Mobile <= 768px) */
+@media (max-width: 768px) {
+  .stage-fan {
+    padding: 1rem 0 2rem 0;
+  }
+
+  .fan-5-books .cv {
+    width: clamp(80px, 21vw, 120px);
+    margin-inline: -20px;
+    border-radius: 8px;
+  }
+
+  .fan-5-books .cv.cv-1 { transform: rotate(-18deg) translateY(22px); z-index: 1; }
+  .fan-5-books .cv.cv-2 { transform: rotate(-9deg) translateY(8px); z-index: 2; }
+  .fan-5-books .cv.cv-3 { transform: rotate(0deg) translateY(0px); z-index: 3; }
+  .fan-5-books .cv.cv-4 { transform: rotate(9deg) translateY(8px); z-index: 4; }
+  .fan-5-books .cv.cv-5 { transform: rotate(18deg) translateY(22px); z-index: 5; }
+
+  .fan-5-books .cv:hover,
+  .fan-5-books .cv.active {
+    transform: translateY(-20px) rotate(0deg) scale(1.15) !important;
+    z-index: 99 !important;
+  }
+}
