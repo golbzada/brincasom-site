@@ -1,9 +1,10 @@
 {
-  "name": "educarafetivamente",
+  "name": "educarativamente",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite --host --port 5173"
+    "dev": "vite --host --port 5173",
+    "build": "vite build"
   },
   "devDependencies": {
     "vite": "^5.4.0"
