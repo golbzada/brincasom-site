@@ -724,3 +724,25 @@ footer p, footer span, footer a, footer .text-secondary {
 .bg-pink-deep {
   background-color: #6F2C91 !important;
 }
+
+/* Tap hint badge above books */
+.tap-hint-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #F3E8FF !important;
+  color: #542582 !important;
+  border: 1.5px solid #D8B4FE !important;
+  padding: 5px 16px !important;
+  border-radius: 9999px !important;
+  font-size: 0.875rem !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 12px rgba(84, 37, 130, 0.12) !important;
+  margin-bottom: 0.5rem !important;
+  animation: pulseHint 2.5s ease-in-out infinite !important;
+}
+
+@keyframes pulseHint {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
