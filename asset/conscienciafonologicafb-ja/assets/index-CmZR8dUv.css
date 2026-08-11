@@ -746,3 +746,19 @@ footer p, footer span, footer a, footer .text-secondary {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.05); }
 }
+
+/* Floating Mobile CTA Styling & Pulse Animation */
+.floating-cta-pulse {
+  animation: floatingCtaPulse 2.6s cubic-bezier(0.4, 0, 0.6, 1) infinite !important;
+}
+
+@keyframes floatingCtaPulse {
+  0%, 100% {
+    transform: translate(-50%, 0) scale(1);
+    box-shadow: 0 10px 25px -5px rgba(255, 184, 0, 0.6), 0 8px 10px -6px rgba(0, 0, 0, 0.15) !important;
+  }
+  50% {
+    transform: translate(-50%, -3px) scale(1.02);
+    box-shadow: 0 15px 30px -5px rgba(255, 184, 0, 0.85), 0 10px 12px -6px rgba(0, 0, 0, 0.2) !important;
+  }
+}
